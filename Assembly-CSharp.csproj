@@ -46,7 +46,11 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ChadMovement.cs" />
+     <Compile Include="Assets\Scripts\Daf_Movement.cs" />
      <Compile Include="Assets\Scripts\EboyMovement.cs" />
+     <Compile Include="Assets\Scripts\Niceboy_Movement.cs" />
+     <Compile Include="Assets\Scripts\arrow.cs" />
+     <Compile Include="Assets\Scripts\enemy_spawn.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.3.9f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

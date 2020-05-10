@@ -6,6 +6,7 @@ using UnityEngine;
 public class EboyMovement : MonoBehaviour
 {
     private Rigidbody2D playerRigidbody;
+    int hitCount = 0;
     public void Awake(){
         playerRigidbody = GetComponent<Rigidbody2D>();
     }
@@ -33,10 +34,21 @@ public class EboyMovement : MonoBehaviour
         float yInput = Input.GetAxis("Vertical");
 
         // float xForce = xInput * moveSpeed * Time.deltaTime;
-        Vector2 velocity = new Vector2(-3,0);
+      
+        Vector2 velocity = new Vector2(-7f,0);
 
         playerRigidbody.velocity = velocity;
 
         // Debug.Log("Velocity: " + playerRigidbody.velocity.x + playerRigidbody.velocity.y);
+    }
+
+    private void OnCollisionEnter2D(Collision2D col){
+        if(col.gameObject.tag.Equals("Arrow")){
+            hitCount++;
+            Destroy (col.gameObject);
+            if(hitCount == 2){
+                Destroy (gameObject);
+            }
+        }
     }
 }
