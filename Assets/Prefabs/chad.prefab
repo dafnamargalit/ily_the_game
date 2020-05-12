@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6611572193925070527}
   - component: {fileID: 6611572193925070523}
   - component: {fileID: 6611572193925070522}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: chad
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,6 +144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a19e7ce6cd2423092893e324d0c43f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  platformLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!95 &6611572193925070522
 Animator:
   serializedVersion: 3

@@ -6,6 +6,8 @@ public class enemy_spawn : MonoBehaviour
 {
     public GameObject chad;
     public GameObject eBoy;
+
+    [SerializeField] private Rigidbody2D daf;
     float randX;
     Vector2 whereToSpawn;
     public float spawnRate = 2f;
@@ -21,14 +23,14 @@ public class enemy_spawn : MonoBehaviour
     {
         if(Time.time > nextSpawn && chadCount < 5){
             nextSpawn = Time.time + spawnRate;
-            randX = 9.9f;
+            randX = Random.Range(daf.position.x + 5, daf.position.x + 10);
             whereToSpawn = new Vector2 (randX, transform.position.y);
             Instantiate (chad, whereToSpawn, Quaternion.identity);
             chadCount++;
         }
-        else if(Time.time > nextSpawn && chadCount >= 5 && eBoyCount < 10){
+        else if(Time.time > nextSpawn && chadCount >= 5){
             nextSpawn = Time.time + spawnRate;
-            randX = 9.9f;
+            randX = Random.Range(daf.position.x + 5, daf.position.x + 10);
             whereToSpawn = new Vector2 (randX, transform.position.y);
             Instantiate (eBoy, whereToSpawn, Quaternion.identity);
             Instantiate (chad, whereToSpawn, Quaternion.identity);

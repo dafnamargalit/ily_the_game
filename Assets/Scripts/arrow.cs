@@ -22,9 +22,7 @@ public class arrow : MonoBehaviour
         Destroy (rb.gameObject, 3f);
     }
 
-    private void OnCollisionEnter2D(Collision2D col){
-        if(col.gameObject.name.Equals("chad") ||col.gameObject.name.Equals("eboy") || col.gameObject.name.Equals("Arrow")){
-            Destroy (col.gameObject);
-        }
+    private void OnCollisionEnter2D(){
+      Destroy(rb.gameObject);
     }
 }

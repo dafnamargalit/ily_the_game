@@ -4,34 +4,98 @@ using UnityEngine;
 
 public class Daf_Movement : MonoBehaviour
 {
+    [SerializeField] private LayerMask platformLayerMask;
     public Animator anim;
+    private Rigidbody2D playerRigidbody;
     public GameObject arrow;
     Vector2 arrowPos;
     public float fireRate = 0.5f;
     float nextFire = 0.0f;
+
+    int timesHit = 0;
     // Start is called before the first frame update
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
     }
 
+    public void Awake(){
+        playerRigidbody = GetComponent<Rigidbody2D>();
+
+    }
+
     // Update is called once per frame
-    void Update()
+void Update()
     {
         // int count = Input.touchCount;
+        if(Input.GetKeyDown(KeyCode.UpArrow) && isGrounded()){
+            jump();
+        }
         if(Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire){
             Debug.Log("shoot");
             nextFire = Time.time + fireRate;
             fire();
+        }
+        if(Input.GetKey(KeyCode.RightArrow)){
+            Debug.Log("right");
+            move();
+        }
+        else if(!Input.GetKey(KeyCode.RightArrow)){
+            anim.SetBool("isRunning", false);
+            playerRigidbody.velocity = new Vector2(0,playerRigidbody.velocity.y);
+        }
+        else if(!Input.GetKey(KeyCode.Space)){
+             anim.SetBool("isShooting", false);
+        }
+        else if(!Input.GetKey(KeyCode.UpArrow)){
+            anim.SetBool("isJumping", false);
         }
     }
 
     void fire()
     {
         arrowPos = transform.position;
-        arrowPos += new Vector2(1f,0f);
+        arrowPos += new Vector2(1f,-0.27f);
         Instantiate(arrow, arrowPos, Quaternion.identity);
+        anim.SetBool("isShooting", true);
         
+    }
+
+    void move()
+    {
+        playerRigidbody.velocity = new Vector2(10f,0);
+        anim.SetBool("isRunning", true);
+    }
+    
+    void jump(){
+        playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x,9);
+        anim.SetBool("isJumping", true);
+    }
+
+    private bool isGrounded(){
+        float extraHeightText = 0.1f;
+        RaycastHit2D hit = Physics2D.Raycast(GetComponent<BoxCollider2D>().bounds.center, Vector2.down, GetComponent<BoxCollider2D>().bounds.extents.y + extraHeightText, platformLayerMask);
+        Color rayColor;
+        if(hit.collider != null){
+            rayColor = Color.green;
+        }
+        else{
+            rayColor = Color.red;
+        }
+        Debug.DrawRay(GetComponent<BoxCollider2D>().bounds.center, Vector2.down * (GetComponent<BoxCollider2D>().bounds.extents.y + extraHeightText));
+        Debug.Log(hit.collider);
+        return hit.collider != null;
+    }
+
+    private void OnCollisionEnter2D(Collision2D col){
+        if(col.gameObject.tag.Equals("Enemy") && timesHit == 2){
+            Destroy (gameObject);
+        }
+        else if(col.gameObject.tag.Equals("Enemy")){
+            Debug.Log("hit");
+            timesHit++;
+            Debug.Log(timesHit);
+        }
     }
 }
 

@@ -7,30 +7,20 @@ public class ChadMovement : MonoBehaviour
 {
     private Rigidbody2D playerRigidbody;
 
+    [SerializeField] private LayerMask platformLayerMask;
 
     public void Awake(){
         playerRigidbody = GetComponent<Rigidbody2D>();
 
     }
     
-    private bool isGrounded(){
-        float extraHeightText = 0.01f;
-        RaycastHit2D hit = Physics2D.Raycast(GetComponent<BoxCollider2D>().bounds.center, Vector2.down, GetComponent<BoxCollider2D>().bounds.extents.y + extraHeightText);
-        Color rayColor;
-        if(hit.collider != null){
-            rayColor = Color.green;
-        }
-        else{
-            rayColor = Color.red;
-        }
-        Debug.DrawRay(GetComponent<BoxCollider2D>().bounds.center, Vector2.down * (GetComponent<BoxCollider2D>().bounds.extents.y + extraHeightText));
-        return hit.collider != null;
-    }
     // Update is called once per frame
     private void FixedUpdate()
     {
         if(playerRigidbody != null){
-            ApplyInput();
+            if(isGrounded()){
+                ApplyInput();
+            }
         }
         else{
             Debug.LogWarning("Rigid body not attached to player" + gameObject.name);
@@ -51,12 +41,7 @@ public class ChadMovement : MonoBehaviour
         // float xForce = xInput * moveSpeed * Time.deltaTime;
         Vector2 velocity = new Vector2(-5,0);
 
-        if(isGrounded()){
-            playerRigidbody.velocity = velocity;
-        }
-        else{
-            playerRigidbody.velocity = new Vector2(0,0);
-        }
+        playerRigidbody.velocity = velocity;
 
         // Debug.Log("Velocity: " + playerRigidbody.velocity.x + playerRigidbody.velocity.y);
     }
@@ -66,5 +51,24 @@ public class ChadMovement : MonoBehaviour
             Destroy (col.gameObject);
             Destroy (gameObject);
         }
+        if(col.gameObject.name.Equals("daf")){
+            playerRigidbody.position = new Vector2(transform.position.x + 2, transform.position.y);
+        }
+    }
+
+    private bool isGrounded(){
+        float extraHeightText = 0.1f;
+        RaycastHit2D hit = Physics2D.Raycast(GetComponent<BoxCollider2D>().bounds.center, Vector2.down, GetComponent<BoxCollider2D>().bounds.extents.y + extraHeightText, platformLayerMask);
+        Color rayColor;
+        if(hit.collider != null){
+            rayColor = Color.green;
+        }
+        else{
+            rayColor = Color.red;
+        }
+        Debug.DrawRay(GetComponent<BoxCollider2D>().bounds.center, Vector2.down * (GetComponent<BoxCollider2D>().bounds.extents.y + extraHeightText));
+        Debug.Log(hit.collider);
+        return hit.collider != null;
     }
 }
+
