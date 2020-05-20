@@ -6,16 +6,22 @@ using UnityEngine;
 public class EboyMovement : MonoBehaviour
 {
     private Rigidbody2D playerRigidbody;
-    int hitCount = 0;
+
+    int timesHit = 0;
+    [SerializeField] private LayerMask platformLayerMask;
+
     public void Awake(){
         playerRigidbody = GetComponent<Rigidbody2D>();
+
     }
- 
+    
     // Update is called once per frame
     private void FixedUpdate()
     {
         if(playerRigidbody != null){
-            ApplyInput();
+            if(isGrounded()){
+                ApplyInput();
+            }
         }
         else{
             Debug.LogWarning("Rigid body not attached to player" + gameObject.name);
@@ -34,8 +40,7 @@ public class EboyMovement : MonoBehaviour
         float yInput = Input.GetAxis("Vertical");
 
         // float xForce = xInput * moveSpeed * Time.deltaTime;
-      
-        Vector2 velocity = new Vector2(-7f,0);
+        Vector2 velocity = new Vector2(-5,0);
 
         playerRigidbody.velocity = velocity;
 
@@ -44,11 +49,31 @@ public class EboyMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col){
         if(col.gameObject.tag.Equals("Arrow")){
-            hitCount++;
             Destroy (col.gameObject);
-            if(hitCount == 2){
+            timesHit++;
+
+            if(timesHit == 2){
                 Destroy (gameObject);
             }
         }
+        if(col.gameObject.name.Equals("daf")){
+            playerRigidbody.position = new Vector2(transform.position.x + 2, transform.position.y);
+        }
+    }
+
+    private bool isGrounded(){
+        float extraHeightText = 0.1f;
+        RaycastHit2D hit = Physics2D.Raycast(GetComponent<BoxCollider2D>().bounds.center, Vector2.down, GetComponent<BoxCollider2D>().bounds.extents.y + extraHeightText, platformLayerMask);
+        Color rayColor;
+        if(hit.collider != null){
+            rayColor = Color.green;
+        }
+        else{
+            rayColor = Color.red;
+        }
+        Debug.DrawRay(GetComponent<BoxCollider2D>().bounds.center, Vector2.down * (GetComponent<BoxCollider2D>().bounds.extents.y + extraHeightText));
+        Debug.Log(hit.collider);
+        return hit.collider != null;
     }
 }
+

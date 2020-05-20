@@ -12,6 +12,7 @@ public class Daf_Movement : MonoBehaviour
     public float fireRate = 0.5f;
     float nextFire = 0.0f;
 
+    float moveDirection = 1;
     int timesHit = 0;
     // Start is called before the first frame update
     void Start()
@@ -25,32 +26,40 @@ public class Daf_Movement : MonoBehaviour
     }
 
     // Update is called once per frame
-void Update()
-    {
-        // int count = Input.touchCount;
-        if(Input.GetKeyDown(KeyCode.UpArrow) && isGrounded()){
-            jump();
-        }
-        if(Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire){
-            Debug.Log("shoot");
-            nextFire = Time.time + fireRate;
-            fire();
-        }
-        if(Input.GetKey(KeyCode.RightArrow)){
-            Debug.Log("right");
-            move();
-        }
-        else if(!Input.GetKey(KeyCode.RightArrow)){
-            anim.SetBool("isRunning", false);
-            playerRigidbody.velocity = new Vector2(0,playerRigidbody.velocity.y);
-        }
-        else if(!Input.GetKey(KeyCode.Space)){
-             anim.SetBool("isShooting", false);
-        }
-        else if(!Input.GetKey(KeyCode.UpArrow)){
-            anim.SetBool("isJumping", false);
-        }
+    void Update()
+        {
+            // int count = Input.touchCount;
+            if(playerRigidbody != null){
+                if(Input.GetKey(KeyCode.RightArrow)){
+                    moveDirection = 1;
+                    move();
+                }
+                if(!Input.GetKey(KeyCode.RightArrow)){
+                    anim.SetBool("isRunning", false);
+                    playerRigidbody.velocity = new Vector2(0, playerRigidbody.velocity.y);
+                }
+                if(Input.GetKey(KeyCode.LeftArrow)){
+                    moveDirection = -1;
+                    move();
+                }
+                if(Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire){
+                    fire();
+                }
+                if(Input.GetKeyUp(KeyCode.Space)){
+                    anim.SetBool("isShooting", false);
+                }
+                if(Input.GetKeyDown(KeyCode.UpArrow) && isGrounded()){
+                    jump();
+                }
+                if(Input.GetKeyUp(KeyCode.UpArrow)){
+                    anim.SetBool("isJumping", false);
+                }
+            }
+            else{
+                Debug.Log("GAME OVER");
+            }
     }
+
 
     void fire()
     {
@@ -63,12 +72,21 @@ void Update()
 
     void move()
     {
-        playerRigidbody.velocity = new Vector2(10f,0);
+           Vector3 currRot = this.transform.eulerAngles;
+        if(moveDirection > 0){
+            currRot.y = 0;
+            this.transform.eulerAngles = currRot;
+        }
+        else{
+            currRot.y = 180;
+            this.transform.eulerAngles = currRot;
+        }
+        playerRigidbody.velocity = new Vector2(10f*moveDirection,playerRigidbody.velocity.y);
         anim.SetBool("isRunning", true);
     }
     
     void jump(){
-        playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x,9);
+        playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x,11);
         anim.SetBool("isJumping", true);
     }
 

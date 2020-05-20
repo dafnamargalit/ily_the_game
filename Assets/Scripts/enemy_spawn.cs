@@ -23,14 +23,14 @@ public class enemy_spawn : MonoBehaviour
     {
         if(Time.time > nextSpawn && chadCount < 5){
             nextSpawn = Time.time + spawnRate;
-            randX = Random.Range(daf.position.x + 5, daf.position.x + 10);
+            randX = Random.Range(daf.position.x + 10, daf.position.x + 20);
             whereToSpawn = new Vector2 (randX, transform.position.y);
             Instantiate (chad, whereToSpawn, Quaternion.identity);
             chadCount++;
         }
         else if(Time.time > nextSpawn && chadCount >= 5){
             nextSpawn = Time.time + spawnRate;
-            randX = Random.Range(daf.position.x + 5, daf.position.x + 10);
+            randX = Random.Range(daf.position.x + 10, daf.position.x + 20);
             whereToSpawn = new Vector2 (randX, transform.position.y);
             Instantiate (eBoy, whereToSpawn, Quaternion.identity);
             Instantiate (chad, whereToSpawn, Quaternion.identity);
