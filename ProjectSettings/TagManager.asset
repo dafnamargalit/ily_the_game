@@ -7,6 +7,8 @@ TagManager:
   - Arrow
   - Enemy
   - Ground
+  - Coin
+  - GameMaster
   layers:
   - Default
   - TransparentFX
@@ -17,9 +19,9 @@ TagManager:
   - 
   - 
   - Platforms
+  - Arrow
+  - Coins
   - Enemy
-  - 
-  - 
   - 
   - 
   - 
@@ -44,9 +46,9 @@ TagManager:
   - name: Background
     uniqueID: 960878807
     locked: 0
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Ground
     uniqueID: 2896042489
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0

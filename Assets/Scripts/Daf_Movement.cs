@@ -12,6 +12,7 @@ public class Daf_Movement : MonoBehaviour
     public float fireRate = 0.5f;
     float nextFire = 0.0f;
 
+    public int score = 0;
     float moveDirection = 1;
     int timesHit = 0;
     // Start is called before the first frame update

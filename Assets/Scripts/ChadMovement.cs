@@ -15,6 +15,7 @@ public class ChadMovement : MonoBehaviour
 
     int direction = -1;
     int counter = 0;
+
     public void Start(){
         playerRigidbody = this.GetComponent<Rigidbody2D>();
         playerTransform = this.transform;
@@ -23,12 +24,20 @@ public class ChadMovement : MonoBehaviour
     }
 
     void FixedUpdate(){
-        if(counter != 500){
+        int x = 0;
+        if(counter != 175){
             counter++;
         }
         else{
             counter = 0;
             direction *= -1;
+            if(direction < 0){
+                x = -180;
+            }
+            else{
+                x = 0;
+            }
+            playerTransform.rotation = new Quaternion(0,x+180,0,0);
         }
         
         Vector2 playerVelocity = playerRigidbody.velocity;
@@ -38,6 +47,7 @@ public class ChadMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col){
         if(col.gameObject.tag.Equals("Arrow")){
+            ScoreText.score += 50;
             Destroy (col.gameObject);
             Destroy (gameObject);
         }
