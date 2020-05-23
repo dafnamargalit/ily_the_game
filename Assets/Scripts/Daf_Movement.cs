@@ -115,6 +115,9 @@ public class Daf_Movement : MonoBehaviour
             timesHit++;
             Debug.Log(timesHit);
         }
+        if(col.gameObject.tag.Equals("Flames")){
+            Destroy(gameObject);
+        }
     }
 }
 

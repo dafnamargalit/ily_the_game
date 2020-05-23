@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Coin
   - GameMaster
+  - Flames
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Arrow
   - Coins
   - Enemy
-  - 
+  - Player
   - 
   - 
   - 
