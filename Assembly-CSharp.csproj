@@ -50,6 +50,8 @@
      <Compile Include="Assets\Scripts\Daf_Movement.cs" />
      <Compile Include="Assets\Scripts\EboyMovement.cs" />
      <Compile Include="Assets\Scripts\Flames.cs" />
+     <Compile Include="Assets\Scripts\Key_Collector.cs" />
+     <Compile Include="Assets\Scripts\Keys_UI.cs" />
      <Compile Include="Assets\Scripts\Niceboy_Movement.cs" />
      <Compile Include="Assets\Scripts\ScoreText.cs" />
      <Compile Include="Assets\Scripts\arrow.cs" />
