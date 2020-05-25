@@ -65,10 +65,12 @@ public class Daf_Movement : MonoBehaviour
     void fire()
     {
         arrowPos = transform.position;
-        arrowPos += new Vector2(1f,-0.27f);
+        arrowPos += new Vector2(1f,moveDirection*0.27f);
         Instantiate(arrow, arrowPos, Quaternion.identity);
-        anim.SetBool("isShooting", true);
         
+        if(isGrounded()){
+        anim.SetBool("isShooting", true);
+         }
     }
 
     void move()
@@ -83,7 +85,9 @@ public class Daf_Movement : MonoBehaviour
             this.transform.eulerAngles = currRot;
         }
         playerRigidbody.velocity = new Vector2(10f*moveDirection,playerRigidbody.velocity.y);
-        anim.SetBool("isRunning", true);
+        if(isGrounded()){
+            anim.SetBool("isRunning", true);
+        }
     }
     
     void jump(){
@@ -116,6 +120,9 @@ public class Daf_Movement : MonoBehaviour
             Debug.Log(timesHit);
         }
         if(col.gameObject.tag.Equals("Flames")){
+            Destroy(gameObject);
+        }
+        if(col.gameObject.tag.Equals("Spikes")){
             Destroy(gameObject);
         }
     }
