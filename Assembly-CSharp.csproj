@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\camera_runner.cs" />
      <Compile Include="Assets\Scripts\enemy_spawn.cs" />
      <Compile Include="Assets\Scripts\heart_spawner.cs" />
+     <Compile Include="Assets\Scripts\horizontal_platform.cs" />
      <Compile Include="Assets\Scripts\moving_platform.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.3.9f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>

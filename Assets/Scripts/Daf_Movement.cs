@@ -14,6 +14,8 @@ public class Daf_Movement : MonoBehaviour
 
     public int score = 0;
     float moveDirection = 1;
+
+    public static float arrowDirection = 1;
     int timesHit = 0;
     // Start is called before the first frame update
     void Start()
@@ -64,10 +66,21 @@ public class Daf_Movement : MonoBehaviour
 
     void fire()
     {
+        Vector3 currRot = this.transform.eulerAngles;
+    
+        if(moveDirection > 0){
+            arrowDirection = 1;
+            currRot.y = 0;
+            this.transform.eulerAngles = currRot;
+        }
+        else{
+            arrowDirection = -1;
+            currRot.y = 180;
+            this.transform.eulerAngles = currRot;
+        }
         arrowPos = transform.position;
-        arrowPos += new Vector2(1f,moveDirection*0.27f);
+        arrowPos += new Vector2(1f,0.1f);
         Instantiate(arrow, arrowPos, Quaternion.identity);
-        
         if(isGrounded()){
         anim.SetBool("isShooting", true);
          }
@@ -75,7 +88,9 @@ public class Daf_Movement : MonoBehaviour
 
     void move()
     {
-           Vector3 currRot = this.transform.eulerAngles;
+        playerRigidbody.isKinematic = false;
+        transform.parent = null;
+        Vector3 currRot = this.transform.eulerAngles;
         if(moveDirection > 0){
             currRot.y = 0;
             this.transform.eulerAngles = currRot;
@@ -88,9 +103,14 @@ public class Daf_Movement : MonoBehaviour
         if(isGrounded()){
             anim.SetBool("isRunning", true);
         }
+        else{
+            anim.SetBool("isRunning", false);
+        }
     }
     
     void jump(){
+        playerRigidbody.isKinematic = false;
+        transform.parent = null;
         playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x,11);
         anim.SetBool("isJumping", true);
     }
@@ -106,7 +126,6 @@ public class Daf_Movement : MonoBehaviour
             rayColor = Color.red;
         }
         Debug.DrawRay(GetComponent<BoxCollider2D>().bounds.center, Vector2.down * (GetComponent<BoxCollider2D>().bounds.extents.y + extraHeightText));
-        Debug.Log(hit.collider);
         return hit.collider != null;
     }
 
@@ -126,6 +145,15 @@ public class Daf_Movement : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnCollisionStay2D(Collision2D col){
+        if(col.gameObject.tag.Equals("moving_platty")){
+            Debug.Log("on platform");
+            playerRigidbody.isKinematic = true;
+            transform.parent = col.transform;
+        }
+    }
+
 }
 
 

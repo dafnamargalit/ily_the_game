@@ -12,14 +12,24 @@ public class arrow : MonoBehaviour
     Rigidbody2D rb;
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = this.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        rb.velocity = new Vector2(velX, velY);
-        Destroy (rb.gameObject, 3f);
+        Vector3 currRot = this.transform.eulerAngles;
+        if(Daf_Movement.arrowDirection > 0){
+            currRot.y = 0;
+            this.transform.eulerAngles = currRot;
+        }
+        else{
+            currRot.y = 180;
+            this.transform.eulerAngles = currRot;
+        }
+
+        rb.velocity = new Vector2(Daf_Movement.arrowDirection*velX, velY);
+        Destroy (rb.gameObject, 1f);
     }
 
     private void OnCollisionEnter2D(){
