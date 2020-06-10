@@ -11,6 +11,7 @@ TagManager:
   - GameMaster
   - Flames
   - Spikes
+  - moving_platty
   layers:
   - Default
   - TransparentFX
