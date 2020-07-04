@@ -10,9 +10,12 @@ public class ScoreText : MonoBehaviour
     public static int score;
     int old_score;
     Text text;
+
+    private GameObject text_score;
     void Start()
     {
-        text = GetComponent<Text>();
+        text_score = GameObject.Find("score");
+        text = text_score.GetComponent<Text>();
     }
 
     // Update is called once per frame

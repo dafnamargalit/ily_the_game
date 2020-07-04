@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
 public class Keys_UI : MonoBehaviour
 {
 
@@ -11,32 +11,66 @@ public class Keys_UI : MonoBehaviour
     private GameObject key_2;
     private GameObject key_3;
 
-    Image image_1;
-    Image image_2;
-    Image image_3;
+    SpriteRenderer image_1;
+    SpriteRenderer image_2;
+    SpriteRenderer image_3;
     // Start is called before the first frame update
     void Start()
     {
-        key_1 = GameObject.Find("keysCollected_1");
-        image_1 = key_1.GetComponent<Image>();
-        key_2 = GameObject.Find("keysCollected_2");
-        image_2 = key_2.GetComponent<Image>();
-        key_3 = GameObject.Find("keysCollected_3");
-        image_3 = key_3.GetComponent<Image>();
-
+        key_1 = GameObject.Find("key_1");
+        if(key_1){
+            Debug.Log("key found");
+            image_1 = key_1.GetComponent<SpriteRenderer>();
+        }
+        else{
+            Debug.Log("key not found");
+        }       
+        key_2 = GameObject.Find("key_2");
+        if(key_2){
+            Debug.Log("key found");
+            image_2 = key_2.GetComponent<SpriteRenderer>();
+        }
+        else{
+            Debug.Log("key not found");
+        }  
+        key_3 = GameObject.Find("key_3");
+        if(key_3){
+            Debug.Log("key found");
+            image_3 = key_3.GetComponent<SpriteRenderer>();
+        }
+        else{
+            Debug.Log("key not found");
+        }  
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(keysCollected == 1){
+        if(key_1){
+          if(keysCollected == 1){
             image_1.color = new Color32(255,253,148,255);
+          }  
         }
-        else if(keysCollected == 2){
+        if(!key_1){
+            Debug.Log("key not found");
+        }
+        if(key_2){
+          if(keysCollected == 2){
             image_2.color = new Color32(255,253,148,255);
+          }  
         }
-        else if(keysCollected == 3){
+        if(!key_2){
+            Debug.Log("key not found");
+        }
+        if(key_3){
+          if(keysCollected == 3){
             image_3.color = new Color32(255,253,148,255);
+          }  
         }
+        if(!key_3){
+            Debug.Log("key not found");
+        }
+        
     }
 }

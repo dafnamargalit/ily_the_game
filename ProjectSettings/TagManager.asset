@@ -12,6 +12,7 @@ TagManager:
   - Flames
   - Spikes
   - moving_platty
+  - Extinguisher
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Enemy
   - Player
   - Spikes
-  - 
+  - Behind
   - 
   - 
   - 

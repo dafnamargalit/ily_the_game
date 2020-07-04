@@ -144,6 +144,11 @@ public class Daf_Movement : MonoBehaviour
         if(col.gameObject.tag.Equals("Spikes")){
             Destroy(gameObject);
         }
+        if(col.gameObject.tag.Equals("Extinguisher")){
+            Destroy(GameObject.Find("flames (4)"));
+            Destroy(GameObject.Find("flames (3)"));
+            Destroy(GameObject.Find("flames (2)"));
+        }
     }
 
     private void OnCollisionStay2D(Collision2D col){
