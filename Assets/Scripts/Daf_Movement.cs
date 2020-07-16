@@ -8,6 +8,8 @@ public class Daf_Movement : MonoBehaviour
     public Animator anim;
     private Rigidbody2D playerRigidbody;
     public GameObject arrow;
+
+    private GameObject heart_1, heart_2, heart_3;
     Vector2 arrowPos;
     public float fireRate = 0.5f;
     float nextFire = 0.0f;
@@ -15,12 +17,18 @@ public class Daf_Movement : MonoBehaviour
     public int score = 0;
     float moveDirection = 1;
 
+    float timer;
+    int index = 0;
+    private bool color = false;
     public static float arrowDirection = 1;
     int timesHit = 0;
     // Start is called before the first frame update
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
+        heart_1 = GameObject.Find("heart_1");
+        heart_2 = GameObject.Find("heart_2");
+        heart_3 = GameObject.Find("heart_3");
     }
 
     public void Awake(){
@@ -33,6 +41,11 @@ public class Daf_Movement : MonoBehaviour
         {
             // int count = Input.touchCount;
             if(playerRigidbody != null){
+                timer += Time.deltaTime;
+                if(timer > 2 && this.GetComponent<SpriteRenderer>().color == new Color32(255,112,113,255)){
+                    this.GetComponent<SpriteRenderer>().color = new Color32(255,255,255,255);
+                    timer = 0;
+                }
                 if(Input.GetKey(KeyCode.RightArrow)){
                     moveDirection = 1;
                     move();
@@ -130,13 +143,25 @@ public class Daf_Movement : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D col){
-        if(col.gameObject.tag.Equals("Enemy") && timesHit == 2){
-            Destroy (gameObject);
-        }
-        else if(col.gameObject.tag.Equals("Enemy")){
+        if(col.gameObject.tag.Equals("Enemy")){
             Debug.Log("hit");
             timesHit++;
-            Debug.Log(timesHit);
+            if(timesHit == 1){
+                timer = 0;
+                heart_3.GetComponent<SpriteRenderer>().color = new Color32(91,83,83,255);
+                this.GetComponent<SpriteRenderer>().color = new Color32(255,112,113,255);
+            }
+            else if(timesHit == 2){
+                timer = 0;
+                heart_2.GetComponent<SpriteRenderer>().color = new Color32(91,83,83,255);
+                this.GetComponent<SpriteRenderer>().color = new Color32(255,112,113,255);
+            }
+            else if (timesHit == 3){
+                timer = 0;
+                heart_1.GetComponent<SpriteRenderer>().color = new Color32(91,83,83,255);
+                this.GetComponent<SpriteRenderer>().color = new Color32(255,112,113,255);
+                Destroy(gameObject);
+            }
         }
         if(col.gameObject.tag.Equals("Flames")){
             Destroy(gameObject);
@@ -158,6 +183,7 @@ public class Daf_Movement : MonoBehaviour
             transform.parent = col.transform;
         }
     }
+
 
 }
 
