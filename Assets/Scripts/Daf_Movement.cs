@@ -9,17 +9,20 @@ public class Daf_Movement : MonoBehaviour
     private Rigidbody2D playerRigidbody;
     public GameObject arrow;
 
+    public static bool openDoor = false;
+    public static bool levelEnd = false;
     private GameObject heart_1, heart_2, heart_3;
     Vector2 arrowPos;
     public float fireRate = 0.5f;
     float nextFire = 0.0f;
 
+    GameObject gameOverScreen;
     public int score = 0;
     float moveDirection = 1;
-
     float timer;
-    int index = 0;
-    private bool color = false;
+
+    // bool player_life = true;
+    // private bool color = false;
     public static float arrowDirection = 1;
     int timesHit = 0;
     // Start is called before the first frame update
@@ -29,6 +32,8 @@ public class Daf_Movement : MonoBehaviour
         heart_1 = GameObject.Find("heart_1");
         heart_2 = GameObject.Find("heart_2");
         heart_3 = GameObject.Find("heart_3");
+        gameOverScreen = GameObject.Find("GameOver");
+        gameOverScreen.SetActive(false);
     }
 
     public void Awake(){
@@ -40,6 +45,9 @@ public class Daf_Movement : MonoBehaviour
     void Update()
         {
             // int count = Input.touchCount;
+            // if(!player_life){
+            //     gameOverScreen.SetActive(true);
+            // }
             if(playerRigidbody != null){
                 timer += Time.deltaTime;
                 if(timer > 2 && this.GetComponent<SpriteRenderer>().color == new Color32(255,112,113,255)){
@@ -161,18 +169,27 @@ public class Daf_Movement : MonoBehaviour
                 heart_1.GetComponent<SpriteRenderer>().color = new Color32(91,83,83,255);
                 this.GetComponent<SpriteRenderer>().color = new Color32(255,112,113,255);
                 Destroy(gameObject);
+                 gameOverScreen.SetActive(true);
             }
         }
         if(col.gameObject.tag.Equals("Flames")){
             Destroy(gameObject);
+             gameOverScreen.SetActive(true);
         }
         if(col.gameObject.tag.Equals("Spikes")){
             Destroy(gameObject);
+             gameOverScreen.SetActive(true);
         }
         if(col.gameObject.tag.Equals("Extinguisher")){
             Destroy(GameObject.Find("flames (4)"));
             Destroy(GameObject.Find("flames (3)"));
             Destroy(GameObject.Find("flames (2)"));
+        }
+        if(col.gameObject.name.Equals("door_trigger")){
+            openDoor = true;
+        }
+        if(col.gameObject.name.Equals("level_end")){
+            levelEnd = true;
         }
     }
 

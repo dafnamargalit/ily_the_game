@@ -16,7 +16,6 @@ public class enemy_spawn : MonoBehaviour
     float nextSpawn = 0.0f;
     // Start is called before the first frame update
   
-    int instance = 1;
 
     // Update is called once per frame
     void Update()

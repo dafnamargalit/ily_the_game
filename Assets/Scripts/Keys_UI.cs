@@ -19,29 +19,16 @@ public class Keys_UI : MonoBehaviour
     {
         key_1 = GameObject.Find("key_1");
         if(key_1){
-            Debug.Log("key found");
             image_1 = key_1.GetComponent<SpriteRenderer>();
-        }
-        else{
-            Debug.Log("key not found");
         }       
         key_2 = GameObject.Find("key_2");
         if(key_2){
-            Debug.Log("key found");
             image_2 = key_2.GetComponent<SpriteRenderer>();
         }
-        else{
-            Debug.Log("key not found");
-        }  
         key_3 = GameObject.Find("key_3");
         if(key_3){
-            Debug.Log("key found");
             image_3 = key_3.GetComponent<SpriteRenderer>();
         }
-        else{
-            Debug.Log("key not found");
-        }  
-        
     }
 
     // Update is called once per frame
@@ -52,24 +39,15 @@ public class Keys_UI : MonoBehaviour
             image_1.color = new Color32(255,253,148,255);
           }  
         }
-        if(!key_1){
-            Debug.Log("key not found");
-        }
         if(key_2){
           if(keysCollected == 2){
             image_2.color = new Color32(255,253,148,255);
           }  
         }
-        if(!key_2){
-            Debug.Log("key not found");
-        }
         if(key_3){
           if(keysCollected == 3){
             image_3.color = new Color32(255,253,148,255);
           }  
-        }
-        if(!key_3){
-            Debug.Log("key not found");
         }
         
     }
