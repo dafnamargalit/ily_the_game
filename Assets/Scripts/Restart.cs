@@ -16,4 +16,28 @@ public class Restart : MonoBehaviour
         ScoreText.score = 0;
         SceneManager.LoadScene("Level_Two");
     }
+
+    public void LevelThree(){
+        Keys_UI.keysCollected = 0;
+        ScoreText.score = 0;
+        SceneManager.LoadScene("Level_Three");
+    }
+
+    public void LevelFour(){
+        Keys_UI.keysCollected = 0;
+        ScoreText.score = 0;
+        SceneManager.LoadScene("Level_Four");
+    }
+
+    public void LevelFive(){
+        Keys_UI.keysCollected = 0;
+        ScoreText.score = 0;
+        SceneManager.LoadScene("Level_Five");
+    }
+
+    public void LevelSix(){
+        Keys_UI.keysCollected = 0;
+        ScoreText.score = 0;
+        SceneManager.LoadScene("Level_Six");
+    }
 }

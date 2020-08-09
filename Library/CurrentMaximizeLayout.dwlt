@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 908, y: 371}
   m_MaxSize: {x: 22003, y: 14021}
   vertical: 0
-  controlID: 10313
+  controlID: 25388
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -61,9 +61,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 411.751, y: -5.6273785, z: -124.51995}
+    m_Target: {x: 347.6614, y: 19.672853, z: -27.547146}
     speed: 2
-    m_Value: {x: 411.76404, y: -5.596139, z: -124.51627}
+    m_Value: {x: 347.6614, y: 19.672853, z: -27.547146}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -113,9 +113,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 14.7224
+    m_Target: 83.00644
     speed: 2
-    m_Value: 14.591079
+    m_Value: 83.00644
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 633, y: 371}
   m_MaxSize: {x: 18003, y: 14021}
   vertical: 1
-  controlID: 10314
+  controlID: 25389
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_MinSize: {x: 633, y: 271}
   m_MaxSize: {x: 18003, y: 10021}
   vertical: 0
-  controlID: 10315
+  controlID: 25390
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -256,20 +256,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 78
   m_LastFolders:
-  - Assets/Sprites
+  - Assets/Scenes
   m_LastFoldersGridSize: 78
   m_LastProjectPath: /Users/dafnamargalit/ily_vidoo_gam
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: cc420000
-    m_LastClickedID: 17100
-    m_ExpandedIDs: 00000000ca420000cc42000000ca9a3b
+    m_SelectedIDs: d8420000
+    m_LastClickedID: 17112
+    m_ExpandedIDs: 00000000ca42000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -322,8 +322,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: aea6ffff
-    m_LastClickedInstanceID: -22866
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000e43a0000bc7e000000000000
     m_RenameOverlay:
@@ -349,7 +349,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 25}
+    m_ScrollPosition: {x: 0, y: 210}
     m_GridSize: 78
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 110
@@ -407,21 +407,21 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 1232}
-      m_SelectedIDs: aea6ffff
-      m_LastClickedID: -22866
-      m_ExpandedIDs: 1cc2ffff82f7ffff6afbffff9c3d0000204100006e050100
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 5607ffff200affff3e11ffff8a1bffffd025ffff1230ffff563affff643affff7e46ffff7848ffff364affffa24affff4a4bffff6c4bffffaa58ffffb259ffffd859ffff805affffe05cffffc85dffffd65dffff226affff026bffff6e6cffff1cc2ffff82f7ffff9c3d0000204100006e050100fc770200c2780200e09b020088a1020046a30200
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: daf
-        m_OriginalName: daf
+        m_Name: MainScreen
+        m_OriginalName: MainScreen
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 15802
+        m_UserData: 129390
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -765,7 +765,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 15802
+  m_LastSelectedObjectID: 161788
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52

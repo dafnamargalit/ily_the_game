@@ -31,10 +31,10 @@ public class Daf_Movement : MonoBehaviour
         heart_1 = GameObject.Find("heart_1");
         heart_2 = GameObject.Find("heart_2");
         heart_3 = GameObject.Find("heart_3");
-        gameOverScreen = GameObject.Find("GameOver");
-        gameOverScreen.SetActive(false);
-        endScreen = GameObject.Find("Level_End");
-        endScreen.SetActive(false);
+        // gameOverScreen = GameObject.Find("GameOver");
+        // gameOverScreen.SetActive(false);
+        // endScreen = GameObject.Find("Level_End");
+        // endScreen.SetActive(false);
         mainScreen = GameObject.Find("MainScreen");
     }
 
@@ -52,7 +52,7 @@ public class Daf_Movement : MonoBehaviour
             // }
             if(playerRigidbody != null){
                 timer += Time.deltaTime;
-                if(timer > 2 && this.GetComponent<SpriteRenderer>().color == new Color32(255,112,113,255)){
+                if(timer > 1 && this.GetComponent<SpriteRenderer>().color == new Color32(255,112,113,255)){
                     this.GetComponent<SpriteRenderer>().color = new Color32(255,255,255,255);
                     timer = 0;
                 }
@@ -141,20 +141,11 @@ public class Daf_Movement : MonoBehaviour
     private bool isGrounded(){
         float extraHeightText = 0.1f;
         RaycastHit2D hit = Physics2D.Raycast(GetComponent<BoxCollider2D>().bounds.center, Vector2.down, GetComponent<BoxCollider2D>().bounds.extents.y + extraHeightText, platformLayerMask);
-        Color rayColor;
-        if(hit.collider != null){
-            rayColor = Color.green;
-        }
-        else{
-            rayColor = Color.red;
-        }
-        Debug.DrawRay(GetComponent<BoxCollider2D>().bounds.center, Vector2.down * (GetComponent<BoxCollider2D>().bounds.extents.y + extraHeightText));
         return hit.collider != null;
     }
 
     private void OnCollisionEnter2D(Collision2D col){
         if(col.gameObject.tag.Equals("Enemy")){
-            Debug.Log("hit");
             timesHit++;
             if(timesHit == 1){
                 timer = 0;

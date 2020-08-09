@@ -8,7 +8,7 @@ public class arrow : MonoBehaviour
 
     public float velX;
     float velY = 0;
-
+    float direction = 1;     
     Rigidbody2D rb;
     void Start()
     {
@@ -19,16 +19,18 @@ public class arrow : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 currRot = this.transform.eulerAngles;
-        if(Daf_Movement.arrowDirection > 0){
+        direction = Daf_Movement.arrowDirection;
+        if(direction > 0 && rb.velocity != new Vector2(-direction*velX,velY)){
             currRot.y = 0;
             this.transform.eulerAngles = currRot;
         }
-        else{
+        else if(rb.velocity != new Vector2(-direction*velX,velY)){
             currRot.y = 180;
             this.transform.eulerAngles = currRot;
         }
-
-        rb.velocity = new Vector2(Daf_Movement.arrowDirection*velX, velY);
+        if(rb.velocity != new Vector2(-direction*velX,velY)){
+            rb.velocity = new Vector2(direction*velX, velY);
+        }
         Destroy (rb.gameObject, 1f);
     }
 

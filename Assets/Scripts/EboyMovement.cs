@@ -6,54 +6,57 @@ using UnityEngine;
 public class EboyMovement : MonoBehaviour
 {
     private Rigidbody2D playerRigidbody;
+    [SerializeField] private LayerMask enemyMask;
+    public Animator anim;
+    private Transform playerTransform;
+
+    float playerWidth;
+    public float speed;
+
+    int direction = -1;
+    int counter = 0;
 
     int timesHit = 0;
-    [SerializeField] private LayerMask platformLayerMask;
 
-    public void Awake(){
-        playerRigidbody = GetComponent<Rigidbody2D>();
-
+    public void Start(){
+        playerRigidbody = this.GetComponent<Rigidbody2D>();
+        playerTransform = this.transform;
+        playerWidth = this.GetComponent<SpriteRenderer>().bounds.extents.x;
+        anim = gameObject.GetComponent<Animator>();
     }
-    
-    // Update is called once per frame
-    private void FixedUpdate()
-    {
-        if(playerRigidbody != null){
-            if(isGrounded()){
-                ApplyInput();
-            }
+
+    void FixedUpdate(){
+        int x = 0;
+        if(counter != 175){
+            counter++;
         }
         else{
-            Debug.LogWarning("Rigid body not attached to player" + gameObject.name);
+            counter = 0;
+            direction *= -1;
+            if(direction < 0){
+                x = -180;
+            }
+            else{
+                x = 0;
+            }
+            playerTransform.rotation = new Quaternion(0,x+180,0,0);
         }
-    }
-
-    // public bool isGrounded(Collision theCollision){
-    //    if(theCollision.gameObject.name == "ground"){
-    //        return true;
-    //    }
-    //    return false;
-    // }
-
-    public void ApplyInput(){
-        float xInput = Input.GetAxis("Horizontal");
-        float yInput = Input.GetAxis("Vertical");
-
-        // float xForce = xInput * moveSpeed * Time.deltaTime;
-        Vector2 velocity = new Vector2(-5,0);
-
-        playerRigidbody.velocity = velocity;
-
-        // Debug.Log("Velocity: " + playerRigidbody.velocity.x + playerRigidbody.velocity.y);
+        
+        Vector2 playerVelocity = playerRigidbody.velocity;
+        playerVelocity.x = direction*speed;
+        playerRigidbody.velocity = playerVelocity;
     }
 
     private void OnCollisionEnter2D(Collision2D col){
         if(col.gameObject.tag.Equals("Arrow")){
-            Destroy (col.gameObject);
             timesHit++;
-
+            this.GetComponent<SpriteRenderer>().color = new Color32(255,112,113,255);
+            ScoreText.score += 50;
+            enemy_spawn.eBoyCount--;
+            Destroy (col.gameObject);
             if(timesHit == 2){
                 Destroy (gameObject);
+                timesHit = 0;
             }
         }
         if(col.gameObject.name.Equals("daf")){
@@ -61,19 +64,6 @@ public class EboyMovement : MonoBehaviour
         }
     }
 
-    private bool isGrounded(){
-        float extraHeightText = 0.1f;
-        RaycastHit2D hit = Physics2D.Raycast(GetComponent<BoxCollider2D>().bounds.center, Vector2.down, GetComponent<BoxCollider2D>().bounds.extents.y + extraHeightText, platformLayerMask);
-        Color rayColor;
-        if(hit.collider != null){
-            rayColor = Color.green;
-        }
-        else{
-            rayColor = Color.red;
-        }
-        Debug.DrawRay(GetComponent<BoxCollider2D>().bounds.center, Vector2.down * (GetComponent<BoxCollider2D>().bounds.extents.y + extraHeightText));
-        Debug.Log(hit.collider);
-        return hit.collider != null;
-    }
+    
 }
 
