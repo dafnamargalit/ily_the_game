@@ -9,20 +9,23 @@ public class ScoreText : MonoBehaviour
 
     public static int score;
     int old_score;
-    Text text;
+    Text mainText, endText;
 
-    private GameObject text_score;
+    private GameObject text_score, end_score;
     void Start()
     {
-        text_score = GameObject.Find("score");
-        text = text_score.GetComponent<Text>();
+        text_score = GameObject.Find("mainScore");
+        end_score = GameObject.Find("endScore");
+        mainText = text_score.GetComponent<Text>();
+        endText = end_score.GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if(score != 0 && old_score != score){
-            text.text = score.ToString(); 
+            mainText.text = score.ToString();
+            endText.text = score.ToString(); 
             old_score = score;
         }
     }

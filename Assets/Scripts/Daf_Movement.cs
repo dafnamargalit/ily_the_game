@@ -10,13 +10,12 @@ public class Daf_Movement : MonoBehaviour
     public GameObject arrow;
 
     public static bool openDoor = false;
-    public static bool levelEnd = false;
     private GameObject heart_1, heart_2, heart_3;
     Vector2 arrowPos;
     public float fireRate = 0.5f;
     float nextFire = 0.0f;
 
-    GameObject gameOverScreen;
+    GameObject gameOverScreen, endScreen, mainScreen;
     public int score = 0;
     float moveDirection = 1;
     float timer;
@@ -34,6 +33,9 @@ public class Daf_Movement : MonoBehaviour
         heart_3 = GameObject.Find("heart_3");
         gameOverScreen = GameObject.Find("GameOver");
         gameOverScreen.SetActive(false);
+        endScreen = GameObject.Find("Level_End");
+        endScreen.SetActive(false);
+        mainScreen = GameObject.Find("MainScreen");
     }
 
     public void Awake(){
@@ -174,7 +176,7 @@ public class Daf_Movement : MonoBehaviour
         }
         if(col.gameObject.tag.Equals("Flames")){
             Destroy(gameObject);
-             gameOverScreen.SetActive(true);
+            gameOverScreen.SetActive(true);
         }
         if(col.gameObject.tag.Equals("Spikes")){
             Destroy(gameObject);
@@ -188,8 +190,21 @@ public class Daf_Movement : MonoBehaviour
         if(col.gameObject.name.Equals("door_trigger")){
             openDoor = true;
         }
-        if(col.gameObject.name.Equals("level_end")){
-            levelEnd = true;
+        if(col.gameObject.name.Equals("level_end") && Keys_UI.keysCollected == 3 && openDoor){
+            endScreen.SetActive(true);
+            mainScreen.SetActive(false);
+        }
+        if(col.gameObject.name.Equals("moving_spikes")){
+            Collider2D collider = col.collider;
+            Vector3 contactPoint = col.contacts[0].point;
+            Vector3 center = collider.bounds.center;
+
+            bool bottom = contactPoint.y < center.y;
+
+            if(bottom){
+                Destroy(gameObject);
+                gameOverScreen.SetActive(true);
+            }
         }
     }
 

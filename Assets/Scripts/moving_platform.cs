@@ -19,7 +19,7 @@ public class moving_platform : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(counter != 100){
+        if(counter != 90){
             counter++;
         }
         else{
@@ -27,7 +27,7 @@ public class moving_platform : MonoBehaviour
             counter = 0;
         }
          
-        platformRigidbody.velocity = new Vector2(0,direction*5f); 
+        platformRigidbody.velocity = new Vector2(0,direction*4f); 
 
     }
 }

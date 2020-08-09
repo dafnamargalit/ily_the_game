@@ -48,6 +48,7 @@ public class ChadMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D col){
         if(col.gameObject.tag.Equals("Arrow")){
             ScoreText.score += 50;
+            enemy_spawn.chadCount--;
             Destroy (col.gameObject);
             Destroy (gameObject);
         }
