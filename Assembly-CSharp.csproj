@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GameOver.cs" />
      <Compile Include="Assets\Scripts\ChadMovement.cs" />
      <Compile Include="Assets\Scripts\Coin_Collector.cs" />
      <Compile Include="Assets\Scripts\ColorChanger.cs" />

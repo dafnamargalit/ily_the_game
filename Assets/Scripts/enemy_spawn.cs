@@ -7,7 +7,7 @@ public class enemy_spawn : MonoBehaviour
     public GameObject chad;
     public GameObject eBoy;
 
-    [SerializeField] private Rigidbody2D daf;
+    [SerializeField] public Rigidbody2D daf;
     float randX;
     Vector2 whereToSpawn;
     public float spawnRate = 2f;
@@ -15,7 +15,7 @@ public class enemy_spawn : MonoBehaviour
     static public int chadCount = 0, eBoyCount = 0;
     float nextSpawn = 0.0f;
     // Start is called before the first frame update
-  
+    
 
     // Update is called once per frame
     void Update()

@@ -144,6 +144,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca5f864bb714487a9ef2ab99a402c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 2048
+  anim: {fileID: 0}
+  speed: 0
 --- !u!95 &7247730019268114244
 Animator:
   serializedVersion: 3

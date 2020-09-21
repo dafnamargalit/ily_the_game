@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Daf_Movement : MonoBehaviour
 {
-    [SerializeField] private LayerMask platformLayerMask;
+    [SerializeField] public LayerMask platformLayerMask;
     public Animator anim;
     private Rigidbody2D playerRigidbody;
     public GameObject arrow;
@@ -31,10 +31,14 @@ public class Daf_Movement : MonoBehaviour
         heart_1 = GameObject.Find("heart_1");
         heart_2 = GameObject.Find("heart_2");
         heart_3 = GameObject.Find("heart_3");
-        // gameOverScreen = GameObject.Find("GameOver");
-        // gameOverScreen.SetActive(false);
-        // endScreen = GameObject.Find("Level_End");
-        // endScreen.SetActive(false);
+        gameOverScreen = GameObject.Find("GameOver");
+        if(gameOverScreen){
+            gameOverScreen.SetActive(false);
+        }
+        endScreen = GameObject.Find("Level_End");
+        if(endScreen){
+            endScreen.SetActive(false);   
+        }
         mainScreen = GameObject.Find("MainScreen");
     }
 
@@ -95,14 +99,16 @@ public class Daf_Movement : MonoBehaviour
             arrowDirection = 1;
             currRot.y = 0;
             this.transform.eulerAngles = currRot;
+            arrowPos = transform.position;
+            arrowPos += new Vector2(1f,0.1f);
         }
         else{
             arrowDirection = -1;
             currRot.y = 180;
             this.transform.eulerAngles = currRot;
+            arrowPos = transform.position;
+            arrowPos += new Vector2(-1f,0.1f);
         }
-        arrowPos = transform.position;
-        arrowPos += new Vector2(1f,0.1f);
         Instantiate(arrow, arrowPos, Quaternion.identity);
         if(isGrounded()){
         anim.SetBool("isShooting", true);
