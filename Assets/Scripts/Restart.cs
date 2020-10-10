@@ -5,6 +5,17 @@ using UnityEngine.SceneManagement;
 public class Restart : MonoBehaviour
 {
     // Start is called before the first frame update
+    public void HomeScreen(){
+        Keys_UI.keysCollected = 0;
+        ScoreText.score = 0;
+        SceneManager.LoadScene("Home");
+    }
+
+    public void LevelsScreen(){
+        Keys_UI.keysCollected = 0;
+        ScoreText.score = 0;
+        SceneManager.LoadScene("Level_Select");
+    }
     public void LevelOne(){
         Keys_UI.keysCollected = 0;
         ScoreText.score = 0;

@@ -20,6 +20,7 @@ public class enemy_spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(daf){
         float dist_to_daf = transform.position.x - daf.position.x;
         if(Time.time > nextSpawn && dist_to_daf < 50 && chadCount < 10 ){
             nextSpawn = Time.time + spawnRate;
@@ -28,6 +29,7 @@ public class enemy_spawn : MonoBehaviour
             whereToSpawn = new Vector2 (transform.position.x, transform.position.y);
             Instantiate (chad, whereToSpawn, Quaternion.identity);
             chadCount++;
+        }
         }
         // else if(Time.time > nextSpawn && chadCount >= 5){
         //     nextSpawn = Time.time + spawnRate;

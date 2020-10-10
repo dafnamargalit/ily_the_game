@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\Niceboy_Movement.cs" />
      <Compile Include="Assets\Scripts\Restart.cs" />
      <Compile Include="Assets\Scripts\ScoreText.cs" />
+     <Compile Include="Assets\Scripts\ScreenNav.cs" />
      <Compile Include="Assets\Scripts\arrow.cs" />
      <Compile Include="Assets\Scripts\camera_runner.cs" />
      <Compile Include="Assets\Scripts\enemy_spawn.cs" />
