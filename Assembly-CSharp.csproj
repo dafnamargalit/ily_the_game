@@ -55,14 +55,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GameOver.cs" />
      <Compile Include="Assets\Scripts\ChadMovement.cs" />
      <Compile Include="Assets\Scripts\Coin_Collector.cs" />
      <Compile Include="Assets\Scripts\ColorChanger.cs" />
      <Compile Include="Assets\Scripts\Daf_Movement.cs" />
      <Compile Include="Assets\Scripts\DoorControl.cs" />
      <Compile Include="Assets\Scripts\EboyMovement.cs" />
-     <Compile Include="Assets\Scripts\Flames.cs" />
      <Compile Include="Assets\Scripts\Key_Collector.cs" />
      <Compile Include="Assets\Scripts\Keys_UI.cs" />
      <Compile Include="Assets\Scripts\Niceboy_Movement.cs" />
@@ -72,7 +70,6 @@
      <Compile Include="Assets\Scripts\arrow.cs" />
      <Compile Include="Assets\Scripts\camera_runner.cs" />
      <Compile Include="Assets\Scripts\enemy_spawn.cs" />
-     <Compile Include="Assets\Scripts\fire_extinguisher.cs" />
      <Compile Include="Assets\Scripts\floating_sign.cs" />
      <Compile Include="Assets\Scripts\heart_spawner.cs" />
      <Compile Include="Assets\Scripts\horizontal_platform.cs" />

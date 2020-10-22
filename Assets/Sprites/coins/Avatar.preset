@@ -1,0 +1,714 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Avatar
+  m_TargetType:
+    m_NativeTypeID: 90
+    m_ManagedTypePPtr: {fileID: 0}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_AvatarSize
+    value: 500
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeleton.data.m_Node.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeleton.data.m_Node.Array.data[0].m_ParentId
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeleton.data.m_Node.Array.data[0].m_AxesId
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeleton.data.m_ID.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeleton.data.m_ID.Array.data[0]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeleton.data.m_AxesArray.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeletonPose.data.m_X.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeletonPose.data.m_X.Array.data[0].t.x
+    value: -9.54
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeletonPose.data.m_X.Array.data[0].t.y
+    value: -3.25
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeletonPose.data.m_X.Array.data[0].t.z
+    value: -9.302802
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeletonPose.data.m_X.Array.data[0].q.x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeletonPose.data.m_X.Array.data[0].q.y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeletonPose.data.m_X.Array.data[0].q.z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeletonPose.data.m_X.Array.data[0].q.w
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeletonPose.data.m_X.Array.data[0].s.x
+    value: 0.41305602
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeletonPose.data.m_X.Array.data[0].s.y
+    value: 0.449254
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_AvatarSkeletonPose.data.m_X.Array.data[0].s.z
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_DefaultPose.data.m_X.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_DefaultPose.data.m_X.Array.data[0].t.x
+    value: -9.54
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_DefaultPose.data.m_X.Array.data[0].t.y
+    value: -3.25
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_DefaultPose.data.m_X.Array.data[0].t.z
+    value: -9.302802
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_DefaultPose.data.m_X.Array.data[0].q.x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_DefaultPose.data.m_X.Array.data[0].q.y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_DefaultPose.data.m_X.Array.data[0].q.z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_DefaultPose.data.m_X.Array.data[0].q.w
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_DefaultPose.data.m_X.Array.data[0].s.x
+    value: 0.41305602
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_DefaultPose.data.m_X.Array.data[0].s.y
+    value: 0.449254
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_DefaultPose.data.m_X.Array.data[0].s.z
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_SkeletonNameIDArray.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_SkeletonNameIDArray.Array.data[0]
+    value: 1755849829
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RootX.t.x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RootX.t.y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RootX.t.z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RootX.q.x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RootX.q.y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RootX.q.z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RootX.q.w
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RootX.s.x
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RootX.s.y
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RootX.s.z
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_Skeleton.data.m_Node.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_Skeleton.data.m_ID.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_Skeleton.data.m_AxesArray.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_SkeletonPose.data.m_X.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LeftHand.data.m_HandBoneIndex.Array.size
+    value: 15
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LeftHand.data.m_HandBoneIndex.Array.data[0]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LeftHand.data.m_HandBoneIndex.Array.data[1]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LeftHand.data.m_HandBoneIndex.Array.data[2]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LeftHand.data.m_HandBoneIndex.Array.data[3]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LeftHand.data.m_HandBoneIndex.Array.data[4]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LeftHand.data.m_HandBoneIndex.Array.data[5]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LeftHand.data.m_HandBoneIndex.Array.data[6]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LeftHand.data.m_HandBoneIndex.Array.data[7]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LeftHand.data.m_HandBoneIndex.Array.data[8]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LeftHand.data.m_HandBoneIndex.Array.data[9]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LeftHand.data.m_HandBoneIndex.Array.data[10]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LeftHand.data.m_HandBoneIndex.Array.data[11]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LeftHand.data.m_HandBoneIndex.Array.data[12]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LeftHand.data.m_HandBoneIndex.Array.data[13]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LeftHand.data.m_HandBoneIndex.Array.data[14]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RightHand.data.m_HandBoneIndex.Array.size
+    value: 15
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RightHand.data.m_HandBoneIndex.Array.data[0]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RightHand.data.m_HandBoneIndex.Array.data[1]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RightHand.data.m_HandBoneIndex.Array.data[2]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RightHand.data.m_HandBoneIndex.Array.data[3]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RightHand.data.m_HandBoneIndex.Array.data[4]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RightHand.data.m_HandBoneIndex.Array.data[5]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RightHand.data.m_HandBoneIndex.Array.data[6]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RightHand.data.m_HandBoneIndex.Array.data[7]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RightHand.data.m_HandBoneIndex.Array.data[8]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RightHand.data.m_HandBoneIndex.Array.data[9]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RightHand.data.m_HandBoneIndex.Array.data[10]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RightHand.data.m_HandBoneIndex.Array.data[11]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RightHand.data.m_HandBoneIndex.Array.data[12]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RightHand.data.m_HandBoneIndex.Array.data[13]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_RightHand.data.m_HandBoneIndex.Array.data[14]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.size
+    value: 25
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[0]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[1]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[2]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[3]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[4]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[5]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[6]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[7]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[8]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[9]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[10]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[11]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[12]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[13]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[14]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[15]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[16]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[17]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[18]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[19]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[20]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[21]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[22]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[23]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneIndex.Array.data[24]
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.size
+    value: 25
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[0]
+    value: 0.14545456
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[1]
+    value: 0.12121213
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[2]
+    value: 0.12121213
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[3]
+    value: 0.048484854
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[4]
+    value: 0.048484854
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[5]
+    value: 0.009696971
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[6]
+    value: 0.009696971
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[7]
+    value: 0.030303033
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[8]
+    value: 0.14545456
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[9]
+    value: 0.14545456
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[10]
+    value: 0.012121214
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[11]
+    value: 0.048484854
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[12]
+    value: 0.006060607
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[13]
+    value: 0.006060607
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[14]
+    value: 0.024242427
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[15]
+    value: 0.024242427
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[16]
+    value: 0.01818182
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[17]
+    value: 0.01818182
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[18]
+    value: 0.006060607
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[19]
+    value: 0.006060607
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[20]
+    value: 0.0024242427
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[21]
+    value: 0.0024242427
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[22]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[23]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HumanBoneMass.Array.data[24]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_Scale
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_ArmTwist
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_ForeArmTwist
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_UpperLegTwist
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LegTwist
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_ArmStretch
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_LegStretch
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_FeetSpacing
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HasLeftHand
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HasRightHand
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_Human.data.m_HasTDoF
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_HumanSkeletonIndexArray.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_HumanSkeletonReverseIndexArray.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_RootMotionBoneIndex
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_RootMotionBoneX.t.x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_RootMotionBoneX.t.y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_RootMotionBoneX.t.z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_RootMotionBoneX.q.x
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_RootMotionBoneX.q.y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_RootMotionBoneX.q.z
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_RootMotionBoneX.q.w
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_RootMotionBoneX.s.x
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_RootMotionBoneX.s.y
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_RootMotionBoneX.s.z
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_RootMotionSkeleton.data.m_Node.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_RootMotionSkeleton.data.m_ID.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_RootMotionSkeleton.data.m_AxesArray.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_RootMotionSkeletonPose.data.m_X.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Avatar.m_RootMotionSkeletonIndexArray.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_TOS.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_TOS.Array.data[0].first
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_TOS.Array.data[0].second
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HumanDescription.m_Human.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HumanDescription.m_Skeleton.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HumanDescription.m_ArmTwist
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HumanDescription.m_ForeArmTwist
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HumanDescription.m_UpperLegTwist
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HumanDescription.m_LegTwist
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HumanDescription.m_ArmStretch
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HumanDescription.m_LegStretch
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HumanDescription.m_FeetSpacing
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HumanDescription.m_GlobalScale
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HumanDescription.m_RootMotionBoneName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HumanDescription.m_HasTranslationDoF
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HumanDescription.m_HasExtraRoot
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HumanDescription.m_SkeletonHasParents
+    value: 1
+    objectReference: {fileID: 0}

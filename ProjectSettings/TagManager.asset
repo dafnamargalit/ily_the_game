@@ -13,6 +13,7 @@ TagManager:
   - Spikes
   - moving_platty
   - Extinguisher
+  - FallingPlatty
   layers:
   - Default
   - TransparentFX

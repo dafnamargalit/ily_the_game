@@ -184,6 +184,11 @@ public class Daf_Movement : MonoBehaviour
             Destroy(GameObject.Find("flames (3)"));
             Destroy(GameObject.Find("flames (2)"));
         }
+        if(col.gameObject.tag.Equals("FallingPlatty")){
+            GameObject platty = GameObject.Find("falling_platty");
+            Rigidbody2D plat = platty.GetComponent<Rigidbody2D>();
+            plat.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+        }
         if(col.gameObject.name.Equals("door_trigger")){
             openDoor = true;
         }
@@ -207,7 +212,6 @@ public class Daf_Movement : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D col){
         if(col.gameObject.tag.Equals("moving_platty")){
-            Debug.Log("on platform");
             playerRigidbody.isKinematic = true;
             transform.parent = col.transform;
         }
