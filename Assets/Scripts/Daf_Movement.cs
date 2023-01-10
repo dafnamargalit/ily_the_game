@@ -8,6 +8,7 @@ public class Daf_Movement : MonoBehaviour
     public Animator anim;
     private Rigidbody2D playerRigidbody;
     public GameObject arrow;
+    public GameObject door_open;
 
     public static bool openDoor = false;
     private GameObject heart_1, heart_2, heart_3;
@@ -31,6 +32,10 @@ public class Daf_Movement : MonoBehaviour
         heart_1 = GameObject.Find("heart_1");
         heart_2 = GameObject.Find("heart_2");
         heart_3 = GameObject.Find("heart_3");
+        door_open = GameObject.Find("door_open");
+        if(door_open){
+            door_open.SetActive(false);
+        }
         gameOverScreen = GameObject.Find("GameOver");
         if(gameOverScreen){
             gameOverScreen.SetActive(false);

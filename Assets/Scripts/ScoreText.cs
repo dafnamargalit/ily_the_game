@@ -15,9 +15,9 @@ public class ScoreText : MonoBehaviour
     void Start()
     {
         text_score = GameObject.Find("mainScore");
-        // end_score = GameObject.Find("endScore");
+        end_score = GameObject.Find("endScore");
         mainText = text_score.GetComponent<Text>();
-        // endText = end_score.GetComponent<Text>();
+        endText = end_score.GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class ScoreText : MonoBehaviour
     {
         if(score != 0 && old_score != score){
             mainText.text = score.ToString();
-            // endText.text = score.ToString(); 
+            endText.text = score.ToString(); 
             old_score = score;
         }
     }
